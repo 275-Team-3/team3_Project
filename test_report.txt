@@ -4,9 +4,9 @@
 
 No tests found, exiting with code 1
 Run with `--passWithNoTests` to exit with code 0
-In /home/runner/work/CISC275012-S23-FinalProjectStarter/CISC275012-S23-FinalProjectStarter
+In /home/runner/work/team3_Project/team3_Project
   4 files checked.
-  testMatch: /home/runner/work/CISC275012-S23-FinalProjectStarter/CISC275012-S23-FinalProjectStarter/src/**/__tests__/**/*.{js,jsx,ts,tsx}, /home/runner/work/CISC275012-S23-FinalProjectStarter/CISC275012-S23-FinalProjectStarter/src/**/*.{spec,test}.{js,jsx,ts,tsx} - 0 matches
+  testMatch: /home/runner/work/team3_Project/team3_Project/src/**/__tests__/**/*.{js,jsx,ts,tsx}, /home/runner/work/team3_Project/team3_Project/src/**/*.{spec,test}.{js,jsx,ts,tsx} - 0 matches
   testPathIgnorePatterns: /node_modules/ - 4 matches
   testRegex:  - 0 matches
 Pattern:  - 0 matches
