@@ -3,10 +3,10 @@ import React from "react";
 function Makeaccount(): JSX.Element {
     return (
         <div className="App">
-            <h2>landing page test</h2>
-            <p>hello there</p>
+            <h2>Account Creation </h2>
+            <p>Please click the button below to create account.</p>
 
-            
+            {/* 
             <button onClick="document.getElementById('id01').style.display='block'">Sign Up</button>
 
              <div id="id01" className="modal">
@@ -38,15 +38,7 @@ function Makeaccount(): JSX.Element {
                 </div>
             </form>
             </div>
-
-
-
-
-
-
-
-
-
+             */}
         </div>
     );
 }
