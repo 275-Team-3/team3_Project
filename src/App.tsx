@@ -12,21 +12,24 @@ import Makeaccount from "./components/makeaccount/makeaccount";
 import Navbar from "./components/navbarcomponent/navbar";
 import Productview from "./components/productview/productview";
 
-
 function App(): JSX.Element {
-    return (<div className="App">
-<Router>
-    <Navbar />
-      <Routes>
-        <Route path="/Login" element={<Login/>}/>
-        <Route path="/Landing" element={<Landing/>}/>
-        <Route path="/Productview" element={<Productview/>}/>
-        <Route path="/Makeaccount" element={<Makeaccount/>}/>
-        <Route path="/Checkout" element={<Checkout/>}/>
-        <Route path="/Admininventory" element={<Admininventory/>}/>
-      </Routes>
-</Router>
-</div>
+    return (
+        <div className="App">
+            <Router>
+                <Navbar />
+                <Routes>
+                    <Route path="/Login" element={<Login />} />
+                    <Route path="/Landing" element={<Landing />} />
+                    <Route path="/Productview" element={<Productview />} />
+                    <Route path="/Makeaccount" element={<Makeaccount />} />
+                    <Route path="/Checkout" element={<Checkout />} />
+                    <Route
+                        path="/Admininventory"
+                        element={<Admininventory />}
+                    />
+                </Routes>
+            </Router>
+        </div>
     );
 }
 
