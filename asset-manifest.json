@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/team3_Project/static/css/main.39f589df.css",
-    "main.js": "/team3_Project/static/js/main.98356131.js",
+    "main.css": "/team3_Project/static/css/main.57e6240d.css",
+    "main.js": "/team3_Project/static/js/main.3f479001.js",
     "static/js/787.4ef7427d.chunk.js": "/team3_Project/static/js/787.4ef7427d.chunk.js",
+    "static/media/nike2.jpg": "/team3_Project/static/media/nike2.c62ffdf97c159c5a1327.jpg",
+    "static/media/r7.jpg": "/team3_Project/static/media/r7.499bf6e1f324a51ee496.jpg",
     "index.html": "/team3_Project/index.html",
-    "main.39f589df.css.map": "/team3_Project/static/css/main.39f589df.css.map",
-    "main.98356131.js.map": "/team3_Project/static/js/main.98356131.js.map",
+    "main.57e6240d.css.map": "/team3_Project/static/css/main.57e6240d.css.map",
+    "main.3f479001.js.map": "/team3_Project/static/js/main.3f479001.js.map",
     "787.4ef7427d.chunk.js.map": "/team3_Project/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39f589df.css",
-    "static/js/main.98356131.js"
+    "static/css/main.57e6240d.css",
+    "static/js/main.3f479001.js"
   ]
 }
