@@ -1,0 +1,54 @@
+.Messi{
+    display: flex;
+    width: 520px;
+    min-height: 100vh;
+}
+
+.sign-in{
+    display: flex;
+    margin-left: 250px;
+    margin-bottom: 30px;
+}
+
+.login-info{
+    display: inline-block;
+    min-height: 100vh;
+    flex: 1;
+    flex-direction: column;
+    font-size: 1px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+  
+    margin-bottom: 70px;
+}
+
+.middle-buttons{
+    margin-bottom: 250px;
+}
+
+p{
+    color: black;
+}
+
+.last-buttons{
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.forms{
+    margin-bottom: 30px;
+}
+
+.button{
+    padding: 4px 88px;
+}

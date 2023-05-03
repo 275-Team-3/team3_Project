@@ -8,6 +8,7 @@ import Landing from "./components/landingpage/landing";
 import Login from "./components/loginpage/loginpage";
 import Makeaccount from "./components/makeaccount/makeaccount";
 import Navbar from "./components/navbarcomponent/navbar";
+import Admin from "./components/adminlogin.css/admin";
 
 function App(): JSX.Element {
     return (
@@ -20,6 +21,7 @@ function App(): JSX.Element {
                     {/* <Route path="/Productview" element={<Productview />} /> */}
                     <Route path="/Makeaccount" element={<Makeaccount />} />
                     <Route path="/Checkout" element={<Checkout />} />
+                    <Route path="/Admin" element={<Admin />} />
                     <Route
                         path="/Admininventory"
                         element={<Admininventory />}
