@@ -1,20 +1,26 @@
 [
-    { "username": "StephenW",
-     "password": "Cisc275-6"
-    },
     { "username": "EricT",
-     "password": "Cisc275-1"
+     "password": "Cisc275-1",
+     "id"      : "TE1"
     },
     { "username": "ShayP",
-     "password": "Cisc275-2"
+     "password": "Cisc275-2",
+     "id"      : "PS2"
     },
     { "username": "ArjunM",
-     "password": "Cisc275-3"
+     "password": "Cisc275-3",
+     "id"      : "MA3"
     },
     { "username": "JoshT",
-     "password": "Cisc275-4"
+     "password": "Cisc275-4",
+     "id"      : "TJ4"
     },
     { "username": "ThomasP",
-     "password": "Cisc275-5"
+     "password": "Cisc275-5",
+     "id"      : "PT5"
+    },
+    { "username": "StephenW",
+     "password": "Cisc275-6",
+     "id"      : "WS6"
     }
 ]
