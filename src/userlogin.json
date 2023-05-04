@@ -1,21 +1,29 @@
 [
-    {"username": "Stephen Wiafe",
-     "password": "" 
-    },
     { "username": "Eric Tlaseca",
-     "password": ""
+     "password": "Cisc275-1",
+       "id"       : "ET2"
      },
     {"username" : "Shay Patel",
-     "password" : ""
+     "password" : "Cisc275-2",
+     "id"       : "SP2"
     },
     {"username" : "Arjun Manikyath",
-     "password" : ""
+     "password" : "Cisc275-3",
+       "id"       : "AM3"
     },
-    {"username" : "Josh",
-     "password" : ""
+    {"username" : "Josh Taing",
+     "password" : "Cisc275-4",
+     "id"       : "JT4"
     },
     {"username" : "Thomas Pelosi",
-     "password" : ""
+     "password" : "Cisc275-5",
+     "id"       : "TP5"
+    },
+    {"username": "Stephen Wiafe",
+     "password": "Cisc275-6" ,
+     "id"      : "SW6"
     }
 ]
+
+
 
