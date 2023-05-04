@@ -1,21 +1,23 @@
 [
     {"username": "Stephen Wiafe",
-     "password": "" 
+     "password": "Cisc275-6" 
     },
     { "username": "Eric Tlaseca",
-     "password": ""
+     "password": "Cisc275-1"
      },
     {"username" : "Shay Patel",
-     "password" : ""
+     "password" : "Cisc275-2"
     },
     {"username" : "Arjun Manikyath",
-     "password" : ""
+     "password" : "Cisc275-3"
     },
-    {"username" : "Josh",
-     "password" : ""
+    {"username" : "Josh Taing",
+     "password" : "Cisc275-4"
     },
     {"username" : "Thomas Pelosi",
-     "password" : ""
+     "password" : "Cisc275-5"
     }
 ]
+
+
 
