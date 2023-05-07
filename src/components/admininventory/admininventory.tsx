@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { ProductData } from "./ProductData";
-import { Button, Form } from "react-bootstrap";
+import React from "react";
+import { Button } from "react-bootstrap";
 <>
     <link
         href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
