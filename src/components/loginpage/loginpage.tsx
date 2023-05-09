@@ -8,7 +8,7 @@ import "firebase/compat/messaging";
 import "firebase/compat/firestore";
 
 function Login(): JSX.Element {
-    // const [user, setUser] = useState(true);
+    const [user, setUser] = useState(true);
     const [usera, setUser] = useState<string>("");
     const [useraimg, setUseraImg] = useState<string>("");
     firebase.initializeApp({

@@ -19,17 +19,17 @@
     max-height: 100%;
 }
 
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
 .card {
+    display: flex;
+    flex: 1 0 21%;
     width: 300px;
     box-shadow: 2px 2px 20px 0 rgba(22, 22, 26, 0.18);
     border-radius: 10px;
     overflow: hidden;
-    /*
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    */
 }
 .card-img-wrapper {
     height: 370px;
@@ -38,6 +38,7 @@
 .card-img {
     height: auto;
     width: 300px;
+    max-width: 100%;
 }
 .card-img img {
     width: 100%;
