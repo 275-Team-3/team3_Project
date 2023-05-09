@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import Ronaldo from "./r7.jpg";
 import "./loginpage.css";
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
-import "firebase/compat/messaging";
-import "firebase/compat/firestore";
+//import firebase from "firebase/compat/app";
+//import "firebase/compat/auth";
+//import "firebase/compat/messaging";
+//import "firebase/compat/firestore";
 
 function Login(): JSX.Element {
+    {
+        /** 
     const [user, setUser] = useState(true);
     const [usera, setUser] = useState<string>("");
     const [useraimg, setUseraImg] = useState<string>("");
@@ -34,8 +36,11 @@ function Login(): JSX.Element {
         }
         console.log(user);
     };
+    */
+    }
     return (
         <div className="login">
+            {/**
             <div className="login">
                 <img src={Ronaldo} />
             </div>
@@ -68,6 +73,7 @@ function Login(): JSX.Element {
             <h2>
                 <img src={useraimg} alt="" />
             </h2>
+    **/}
         </div>
     );
 }
