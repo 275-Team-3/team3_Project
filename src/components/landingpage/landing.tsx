@@ -10,7 +10,7 @@ import img7 from "./lp_images/7.jpg";
 import img8 from "./lp_images/8.jpg";
 import img9 from "./lp_images/9.jpg";
 import Productview from "../productview/productview";
-import * as productJson from "../products.json";
+//import * as productJson from "../products.json";
 
 function Landing(): JSX.Element {
     const [isclick, setclick] = useState(false);
