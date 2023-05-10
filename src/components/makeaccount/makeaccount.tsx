@@ -21,7 +21,7 @@ function Makeaccount(): JSX.Element {
         <script></script>
     </>;
 
-    const [account, setAccountData] = useState<Accounts[]>(AccountData);
+    //const [account, setAccountData] = useState<Accounts[]>(AccountData);
     return (
         <div className="App">
             <div className="profile">
