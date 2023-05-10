@@ -21,7 +21,7 @@ function Makeaccount(): JSX.Element {
         <script></script>
     </>;
 
-    //const [account, setAccountData] = useState<Accounts[]>(AccountData);
+    const [account, setAccountData] = useState<Accounts[]>(AccountData);
     return (
         <div className="App">
             <div className="profile">
@@ -51,7 +51,23 @@ function Makeaccount(): JSX.Element {
                     />
                 </Form.Group>
             </div>
-            <Button className="button">UPDATE</Button>
+            <Button className="button">
+                UPDATE onClick=
+                {() => {
+                    setAccountData([
+                        ...account,
+                        {
+                            title: "name",
+                            description: "product",
+                            price: 13,
+                            stock: 13,
+                            brand: "nike",
+                            category: "shoes",
+                            image: "url"
+                        }
+                    ]);
+                }}
+            </Button>
         </div>
     );
 }
