@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import Ronaldo from "./r7.jpg";
@@ -34,6 +35,14 @@ function Login(): JSX.Element {
         }
         console.log(user);
     };
+
+    /*try {
+        const jsonString = fs.readFileSync("path/to/json/file.json", "utf-8");
+        const jsonData = JSON.parse(jsonString);
+        console.log(jsonData);
+    } catch (err) {
+        console.error(err);
+    }*/
     return (
         <div className="login">
             <div className="login">

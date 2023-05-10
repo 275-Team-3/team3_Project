@@ -8,7 +8,7 @@ import Landing from "./components/landingpage/landing";
 import Login from "./components/loginpage/loginpage";
 import Makeaccount from "./components/makeaccount/makeaccount";
 import Navbar from "./components/navbarcomponent/navbar";
-import Admin from "./components/adminlogin.css/admin";
+import Admin from "./components/adminlogin/admin";
 
 function App(): JSX.Element {
     return (
