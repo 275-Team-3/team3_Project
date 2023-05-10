@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { ProductData, productList } from "./ProductData";
 import { Button } from "react-bootstrap";
 <>
     <link
@@ -17,20 +18,9 @@ import { Button } from "react-bootstrap";
 </>;
 
 function Admininventory(): JSX.Element {
+    const [product, setProduct] = useState<ProductData[]>(productList);
     /*
-    function InsertRow():
-        | React.MouseEventHandler<HTMLButtonElement>
-        | undefined {
-        throw new Error("Function not implemented.");
-    }
-
-    function DeleteRow():
-        | React.MouseEventHandler<HTMLButtonElement>
-        | undefined {
-        throw new Error("Function not implemented.");
-    }
-*/
-    /*function addRow() {
+    function addRow() {
         // Create a new row
         const tableBody = document
             .getElementById("myTable")
@@ -57,11 +47,12 @@ function Admininventory(): JSX.Element {
                     >
                         <thead>
                             <tr>
-                                <th className="text-center">#</th>
                                 <th className="text-center">Product</th>
                                 <th className="text-center">Brand</th>
                                 <th className="text-center">Price</th>
+                                <th className="text-center">Image</th>
                                 <th className="text-center">Stock</th>
+                                <th className="text-center">Category</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -99,8 +90,28 @@ function Admininventory(): JSX.Element {
                                         className="form-control"
                                     />
                                 </td>
+                                <td>
+                                    <input
+                                        type="string"
+                                        name="image"
+                                        placeholder="Enter image"
+                                        className="form-control"
+                                    />
+                                </td>
                             </tr>
                             <tr id="addr1"></tr>
+                            {product.map((prod: ProductData) => {
+                                return (
+                                    <tr key={1}>
+                                        <th scope="row">{prod.title}</th>
+                                        <td>{prod.brand}</td>
+                                        <td>{prod.price}</td>
+                                        <td>{prod.image}</td>
+                                        <td>{prod.stock}</td>
+                                        <td>{prod.category}</td>
+                                    </tr>
+                                );
+                            })}
                         </tbody>
                     </table>
                 </div>
@@ -108,15 +119,24 @@ function Admininventory(): JSX.Element {
             <Button
                 id="add_row"
                 className="btn btn-default pull-left"
-                // onClick={InsertRow()}
+                onClick={() => {
+                    setProduct([
+                        ...product,
+                        {
+                            title: "name",
+                            description: "product",
+                            price: 13,
+                            stock: 13,
+                            brand: "nike",
+                            category: "shoes",
+                            image: "url"
+                        }
+                    ]);
+                }}
             >
                 Add Row
             </Button>
-            <Button
-                //onClick={DeleteRow()}
-                id="delete_row"
-                className="pull-right btn btn-default"
-            >
+            <Button id="delete_row" className="pull-right btn btn-default">
                 Delete Row
             </Button>
         </div>
