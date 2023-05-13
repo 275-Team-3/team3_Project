@@ -7,6 +7,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/messaging";
 import "firebase/compat/firestore";
+import adminUser from "../adminlogin/userlogin.json";
 
 function Login(): JSX.Element {
     // const [user, setUser] = useState(true);
@@ -36,33 +37,53 @@ function Login(): JSX.Element {
         console.log(user);
     };
 
-    /*try {
-        const jsonString = fs.readFileSync("path/to/json/file.json", "utf-8");
-        const jsonData = JSON.parse(jsonString);
-        console.log(jsonData);
-    } catch (err) {
-        console.error(err);
-    }*/
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleLogin = () => {
+        // Finds admin with the matching username and password
+        const admin = adminUser.find(
+            (admin) =>
+                admin.username === username && admin.password === password
+        );
+
+        if (admin) {
+            // If user is found in json file send them to inventory page
+            window.location.href = "../landing";
+        } else {
+            // If user is not found, display an error message
+            alert("Invalid username or password");
+        }
+    };
     return (
         <div className="login">
             <div className="login">
                 <img src={Ronaldo} />
             </div>
             <div className="login-info">
-                <h2 className="header">Welcome to Ekin, {usera}</h2>
+                <h2 className="header">Welcome to Ekin {usera}</h2>
                 <div className="forms">
                     <Form.Group controlId="formBasicEmail">
                         <Form.Control
                             className="forms"
-                            type="email"
+                            type="text"
                             placeholder="Email or Username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                         />
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
                     </Form.Group>
                 </div>
                 <div className="middle-buttons">
                     <div>
-                        <Button className="button">LOGIN NOW</Button>
+                        <Button className="button" onClick={handleLogin}>
+                            LOGIN NOW
+                        </Button>
                     </div>
                     <h6>Forgot your password?</h6>
                     <div>

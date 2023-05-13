@@ -2,8 +2,28 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import Messi from "./messi.jpeg";
 import "./admin.css";
+import adminUser from "../adminlogin/userlogin.json";
 
 function Admin(): JSX.Element {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleLogin = () => {
+        // Finds admin with the matching username and password
+        const admin = adminUser.find(
+            (admin) =>
+                admin.username === username && admin.password === password
+        );
+
+        if (admin) {
+            // If user is found in json file send them to inventory page
+            window.location.href = "../admininventory";
+        } else {
+            // If user is not found, display an error message
+            alert("Invalid username or password");
+        }
+    };
+
     return (
         <div className="login">
             <div className="Messi">
@@ -18,13 +38,22 @@ function Admin(): JSX.Element {
                             className="forms"
                             type="text"
                             placeholder="Email or Username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                         />
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
                     </Form.Group>
                 </div>
                 <div className="middle-buttons">
                     <div>
-                        <Button className="button">LOGIN NOW</Button>
+                        <Button className="button" onClick={handleLogin}>
+                            LOGIN NOW
+                        </Button>
                     </div>
                     <h6>Forgot your password?</h6>
                 </div>
