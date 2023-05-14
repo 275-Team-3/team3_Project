@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Productview from "../productview/productview";
 
 let defaultData: {
@@ -15,7 +16,7 @@ if (loadData !== null) {
 }
 
 function Checkout(): JSX.Element {
-    const [quantity, setQuantity] = useState(1);
+    const setPath = useNavigate();
     const [cartData, setCartData] = useState<
         {
             Product: string;
@@ -49,6 +50,11 @@ function Checkout(): JSX.Element {
         );
         setCartData(withUpdatedAmount);
     }
+
+    function saveCartData() {
+        localStorage.setItem(userCartKey, JSON.stringify(cartData));
+        // setPath("/checkout");
+    }
     return (
         <div>
             <table className="table">
@@ -64,8 +70,8 @@ function Checkout(): JSX.Element {
                 <tbody>
                     {cartData.map((item, index) => (
                         <tr key={index}>
-                            <td>
-                                <img src={item.Photo} />
+                            <td width="40%">
+                                <img width="20%" src={item.Photo} />
                             </td>
                             <th scope="row">{item.Product}</th>
                             <td>{item.Price}</td>
@@ -85,7 +91,7 @@ function Checkout(): JSX.Element {
                                     Remove 1
                                 </Button>
                                 <hr></hr>
-                                {quantity == 0 ? (
+                                {item.Amount == 0 ? (
                                     <Button
                                         onClick={() =>
                                             removeFromInventory(item.Product)
@@ -102,8 +108,13 @@ function Checkout(): JSX.Element {
                         </tr>
                     ))}
                     <div className="checkoutCart">
-                        <button type="button" className="btn btn-light btn-lg">
-                            CHECKOUT 🛒
+                        <button
+                            type="button"
+                            className="btn btn-light btn-lg"
+                            onClick={() => saveCartData()}
+                        >
+                            Save Cart
+                            {/* CHECKOUT 🛒 */}
                         </button>
                     </div>
                 </tbody>
