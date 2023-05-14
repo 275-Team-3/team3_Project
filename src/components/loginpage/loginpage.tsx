@@ -8,8 +8,10 @@ import "firebase/compat/auth";
 import "firebase/compat/messaging";
 import "firebase/compat/firestore";
 import adminUser from "../adminlogin/userlogin.json";
+import { useNavigate } from "react-router-dom";
 
 function Login(): JSX.Element {
+    const setPath = useNavigate();
     // const [user, setUser] = useState(true);
     const [usera, setUser] = useState<string>("");
     const [useraimg, setUseraImg] = useState<string>("");
@@ -49,7 +51,7 @@ function Login(): JSX.Element {
 
         if (admin) {
             // If user is found in json file send them to inventory page
-            window.location.href = "../landing";
+            setPath("/landing");
         } else {
             // If user is not found, display an error message
             alert("Invalid username or password");
