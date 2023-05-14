@@ -57,13 +57,10 @@ function Makeaccount(): JSX.Element {
                     setAccountData([
                         ...account,
                         {
-                            title: "name",
-                            description: "product",
-                            price: 13,
-                            stock: 13,
-                            brand: "nike",
-                            category: "shoes",
-                            image: "url"
+                            email: "email",
+                            name: "John",
+                            age: 23,
+                            password: Hello123
                         }
                     ]);
                 }}
