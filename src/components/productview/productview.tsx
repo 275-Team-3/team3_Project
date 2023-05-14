@@ -5,9 +5,19 @@ import { useNavigate } from "react-router-dom";
 
 interface productDetails {
     name: string;
-    price: number;
+    price: string;
     imge: string;
+    description: string;
 }
+// const userCart: {
+//     Product: string;
+//     Description: string;
+//     Price: string;
+//     Brand: string;
+//     Photo: string;
+// }[] = [];
+
+// const userCartKey = "MY-PAGE-USER-CART";
 
 function Productview(props: productDetails): JSX.Element {
     const setPath = useNavigate();
@@ -24,10 +34,10 @@ function Productview(props: productDetails): JSX.Element {
                         <h5 className="productPrice">{props.price}</h5>
                     </div>
                     <div className="sizeWord">
-                        <h3>SIZES</h3>
+                        <h3>DESCRIPTION</h3>
                     </div>
 
-                    <div className="genderChoiceArea">
+                    {/* <div className="genderChoiceArea">
                         <button
                             className="btn btn-outline-primary me-3"
                             aria-pressed="true"
@@ -41,11 +51,12 @@ function Productview(props: productDetails): JSX.Element {
                         >
                             Female
                         </button>
-                        {/* <Button>Male</Button>
-                        <Button>Female</Button> */}
-                    </div>
+                        <Button>Male</Button>
+                        <Button>Female</Button>
+                    </div> */}
                     <div className="sizeOptions">
-                        <table className="table">
+                        <p>{props.description}</p>
+                        {/* <table className="table">
                             <thead>
                                 <tr>
                                     <th scope="col">Men shoes Size</th>
@@ -83,7 +94,7 @@ function Productview(props: productDetails): JSX.Element {
                                     <td>44.5</td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table> */}
                     </div>
                 </div>
                 <div className="userSelectedSize"></div>
