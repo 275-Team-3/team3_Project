@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import Productview from "../productview/productview";
+// import { useNavigate } from "react-router-dom";
 
 let defaultData: {
     Product: string;
@@ -16,7 +15,7 @@ if (loadData !== null) {
 }
 
 function Checkout(): JSX.Element {
-    const setPath = useNavigate();
+    // const setPath = useNavigate();
     const [cartData, setCartData] = useState<
         {
             Product: string;
@@ -68,8 +67,8 @@ function Checkout(): JSX.Element {
                     </tr>
                 </thead>
                 <tbody>
-                    {cartData.map((item, index) => (
-                        <tr key={index}>
+                    {cartData.map((item) => (
+                        <tr key={item.Product}>
                             <td width="40%">
                                 <img width="20%" src={item.Photo} />
                             </td>
