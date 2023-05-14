@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import React from "react";
+import React, { useState } from "react";
 import "./productview.css";
 import { useNavigate } from "react-router-dom";
 
@@ -9,18 +9,43 @@ interface productDetails {
     imge: string;
     description: string;
 }
-// const userCart: {
-//     Product: string;
-//     Description: string;
-//     Price: string;
-//     Brand: string;
-//     Photo: string;
-// }[] = [];
+let userCart: {
+    Product: string;
+    Price: string;
+    Photo: string;
+    Amount: number;
+}[] = [];
 
-// const userCartKey = "MY-PAGE-USER-CART";
+const userCartKey = "MY-PAGE-USER-CART";
+
+const previousData = localStorage.getItem(userCartKey);
+// If the data doesn't exist, `getItem` returns null
+if (previousData !== null) {
+    userCart = JSON.parse(previousData);
+}
 
 function Productview(props: productDetails): JSX.Element {
     const setPath = useNavigate();
+    const [cartData, setCartData] = useState<
+        {
+            Product: string;
+            Price: string;
+            Photo: string;
+            Amount: number;
+        }[]
+    >(userCart);
+
+    function updateCart(product: string, price: string, photo: string) {
+        setCartData([
+            ...cartData,
+            { Product: product, Price: price, Photo: photo, Amount: 1 }
+        ]);
+        console.log(JSON.stringify(cartData));
+    }
+    function saveData() {
+        localStorage.setItem(userCartKey, JSON.stringify(cartData));
+        setPath("/checkout");
+    }
     return (
         <div className="Productview">
             <div className="leftColumn">
@@ -102,9 +127,18 @@ function Productview(props: productDetails): JSX.Element {
                     <button
                         type="button"
                         className="btn btn-dark btn-lg"
-                        onClick={() => setPath("/checkout")}
+                        onClick={() =>
+                            updateCart(props.name, props.price, props.imge)
+                        }
                     >
                         ADD TO CART 🛒
+                    </button>
+                    <button
+                        type="button"
+                        className="btn btn-dark btn-lg"
+                        onClick={() => saveData()}
+                    >
+                        Save TO CART 🛒
                     </button>
                 </div>
             </div>
