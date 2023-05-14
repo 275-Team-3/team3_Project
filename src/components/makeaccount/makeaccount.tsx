@@ -60,7 +60,7 @@ function Makeaccount(): JSX.Element {
                             email: "email",
                             name: "John",
                             age: 23,
-                            password: Hello123
+                            password: "Hello123"
                         }
                     ]);
                 }}
