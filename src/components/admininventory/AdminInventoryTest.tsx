@@ -12,11 +12,15 @@ describe("Checkout Process", () => {
         );
     });
     test("Admin can add products", () => {
-        const addProductButton = screen.getByText("Add Product");
-        fireEvent.click(addProductButton);
+        const AddtoInventory = screen.getByText("Add to Inventory");
+        fireEvent.click(AddtoInventory);
     });
     test("Admin can remove products", () => {
-        const removeProductButton = screen.getByText("Remove Product");
-        fireEvent.click(removeProductButton);
+        const remove = screen.getByText("Remove");
+        fireEvent.click(remove);
+    });
+    test("Admin can save inventory", () => {
+        const inventory = screen.getByText("Save new inventory");
+        fireEvent.click(inventory);
     });
 });
