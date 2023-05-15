@@ -1,6 +1,6 @@
 [
     {
-        "title": "Nike Air Jordan Luka 1",
+        "product": "Nike Air Jordan Luka 1",
         "description": "Mint Foam/Racer Pink-Court Purple",
         "price": 110,
         "stock": 94,
@@ -10,7 +10,7 @@
         "image": "../src/components/landingpage/lp_images/1.jpg"
     },
     {
-        "title": "Nike Zoom Freak 4",
+        "product": "Nike Zoom Freak 4",
         "description": "Pale Vanilla/Coral Chalk/Blue Lightning",
         "price": 130,
         "stock": 94,
@@ -20,7 +20,7 @@
         "image": "../src/components/landingpage/lp_images/2.jpg"
     },
     {
-        "title": "Nike Giannis Immortality 2",
+        "product": "Nike Giannis Immortality 2",
         "description": "Cobblestone/Ironstone/Magic Ember/Black",
         "price": 85,
         "stock": 94,
@@ -30,7 +30,7 @@
         "image": "../src/components/landingpage/lp_images/3.jpg"
     },
     {
-        "title": "Nike LeBron Witness 6",
+        "product": "Nike LeBron Witness 6",
         "description": "Game Royal Blue/White",
         "price": 105,
         "stock": 94,
@@ -40,7 +40,7 @@
         "image": "../src/components/landingpage/lp_images/4.jpg"
     },
     {
-        "title": "Nike Air Jordan XXXVII SP",
+        "product": "Nike Air Jordan XXXVII SP",
         "description": "Oil Green/Orange Horizon/Twilight Marsh/Black",
         "price": 210,
         "stock": 94,
@@ -50,7 +50,7 @@
         "image": "../src/components/landingpage/lp_images/5.jpg"
     },
     {
-        "title": "Nike Renew Elevate 3",
+        "product": "Nike Renew Elevate 3",
         "description": "Black/Midnight Navy/White/Volt",
         "price": 74,
         "stock": 94,
@@ -60,7 +60,7 @@
         "image": "../src/components/landingpage/lp_images/6.jpg"
     },
     {
-        "title": "Nike Lebron James Jersey",
+        "product": "Nike Lebron James Jersey",
         "description": "Gold/LA Lakers",
         "price": 120,
         "stock": 94,
@@ -70,7 +70,7 @@
         "image": "../src/components/landingpage/lp_images/7.jpg"
     },
     {
-        "title": "Nike Stephen Curry Jersey",
+        "product": "Nike Stephen Curry Jersey",
         "description": "White/Golden State Warriors",
         "price": 120,
         "stock": 94,
@@ -80,7 +80,7 @@
         "image": "../src/components/landingpage/lp_images/8.jpg"
     },
     {
-        "title": "Nike Giannis Antetokounmpo Jersey",
+        "product": "Nike Giannis Antetokounmpo Jersey",
         "description": "Green/Milwaukee Bucks",
         "price": 119,
         "stock": 94,
@@ -90,7 +90,7 @@
         "image": "../src/components/landingpage/lp_images/9.jpg"
     },
     {
-        "title": "Nike Mbappe Home Jersey",
+        "product": "Nike Mbappe Home Jersey",
         "description": "Paris Saint-Germain Match Home",
         "price": 130,
         "stock": 94,
@@ -100,7 +100,7 @@
         "image": "../src/components/landingpage/lp_images/10.jpg"
     },
     {
-        "title": "Al-Nassr Ronaldo Home Jersey",
+        "product": "Al-Nassr Ronaldo Home Jersey",
         "description": "Official 2023 Al-Nassr",
         "price": 105,
         "stock": 94,
@@ -110,7 +110,7 @@
         "image": "../src/components/landingpage/lp_images/11.jpg"
     },
     {
-        "title": "Adidas Messi Home Jersey",
+        "product": "Adidas Messi Home Jersey",
         "description": "Argentina WC 2022-2023",
         "price": 110,
         "stock": 94,
@@ -120,7 +120,7 @@
         "image": "../src/components/landingpage/lp_images/12.jpg"
     },
     {
-        "title": "Nishiki Pueblo 26 Mountain Bike",
+        "product": "Nishiki Pueblo 26 Mountain Bike",
         "description": "Cyan/Black",
         "price": 299,
         "stock": 94,
@@ -130,7 +130,7 @@
         "image": "../src/components/landingpage/lp_images/13.jpg"
     },
     {
-        "title": "Everlast Pro Style Boxing Training Gloves",
+        "product": "Everlast Pro Style Boxing Training Gloves",
         "description": "Red",
         "price": 60,
         "stock": 94,
@@ -140,7 +140,7 @@
         "image": "../src/components/landingpage/lp_images/14.jpg"
     },
     {
-        "title": "Nike Vapor Jet 7.0 Football Gloves",
+        "product": "Nike Vapor Jet 7.0 Football Gloves",
         "description": "White/Red",
         "price": 40,
         "stock": 94,
@@ -150,7 +150,7 @@
         "image": "../src/components/landingpage/lp_images/15.jpg"
     },
     {
-        "title": "Nike Jordan Basketball Arm Shooter Sleeve",
+        "product": "Nike Jordan Basketball Arm Shooter Sleeve",
         "description": "Black",
         "price": 24,
         "stock": 94,
@@ -160,7 +160,7 @@
         "image": "../src/components/landingpage/lp_images/16.jpg"
     },
     {
-        "title": "Adidas Elite Volleyball Knee Pads",
+        "product": "Adidas Elite Volleyball Knee Pads",
         "description": "White/Black",
         "price": 30,
         "stock": 94,
@@ -170,7 +170,7 @@
         "image": "../src/components/landingpage/lp_images/17.jpg"
     },
     {
-        "title": "Babolat Drive Max 110 Tennis Racquet",
+        "product": "Babolat Drive Max 110 Tennis Racquet",
         "description": "Blue/Black",
         "price": 100,
         "stock": 94,
