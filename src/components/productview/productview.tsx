@@ -67,7 +67,7 @@ function Productview(props: productDetails): JSX.Element {
                         <h5 className="productPrice">{props.price}</h5>
                     </div>
                     <div className="sizeWord">
-                        <h3>DESCRIPTION</h3>
+                        <h3>Description: </h3>
                     </div>
                     <div className="sizeOptions">
                         <p>{props.description}</p>
