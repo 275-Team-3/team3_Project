@@ -16,7 +16,7 @@ function App(): JSX.Element {
     return (
         <div className="App">
             {/* basename="/team3_Project" */}
-            <Router>
+            <Router basename="/team3_Project">
                 <Navbar />
                 <Routes>
                     <Route path="/login" element={<Login />} />
