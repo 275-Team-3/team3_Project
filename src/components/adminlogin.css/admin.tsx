@@ -1,13 +1,12 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import Messi from "./messi.jpeg";
 import "./admin.css";
 
 function Admin(): JSX.Element {
     return (
         <div className="login">
             <div className="Messi">
-                <img src={Messi} />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcHAvIny22NJoLBKU4UGZQAIcyB4qFb563bg&usqp=CAU" />
             </div>
             <div className="login-info">
                 <h2 className="header">Welcome to Ekin</h2>

@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 /* eslint-disable indent */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
