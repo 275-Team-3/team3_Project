@@ -8,7 +8,7 @@ import Productview from "../productview/productview";
 /* eslint-disable no-extra-parens */
 let defaultData = [
     {
-        Product: "Nike mercury",
+        Product: "Nike mercury ",
         Description: "nike mercury 12 limited edition",
         Price: "200",
         Stock: "94",
