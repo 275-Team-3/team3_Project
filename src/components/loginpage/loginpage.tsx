@@ -59,7 +59,6 @@ function Login(): JSX.Element {
     };
     return (
         <div className="login">
-            {/**
             <div className="login">
                 <img src={Ronaldo} />
             </div>
@@ -101,7 +100,6 @@ function Login(): JSX.Element {
             <h2>
                 <img src={useraimg} alt="" />
             </h2>
-    **/}
         </div>
     );
 }
