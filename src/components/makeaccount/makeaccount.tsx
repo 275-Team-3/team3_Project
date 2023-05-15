@@ -1,4 +1,5 @@
-import React from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React, { useState } from "react";
 import "./makeaccount.css";
 import { Button, Form } from "react-bootstrap";
 import UserIcon from "../userIcon";
@@ -10,7 +11,7 @@ function Makeaccount(): JSX.Element {
                 <UserIcon />
             </div>
             <div className="forms">
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group>
                     <Form.Control
                         className="forms"
                         type="email"
@@ -29,11 +30,16 @@ function Makeaccount(): JSX.Element {
                     <Form.Control
                         className="forms"
                         type="email"
+                        placeholder="Password"
+                    />
+                    <Form.Control
+                        className="forms"
+                        type="email"
                         placeholder="Age"
                     />
                 </Form.Group>
             </div>
-            <Button className="button">UPDATE</Button>
+            <Button className="button">UPDATE onClick</Button>
         </div>
     );
 }
