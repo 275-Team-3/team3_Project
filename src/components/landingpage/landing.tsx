@@ -74,6 +74,7 @@ const splitArr = (
 
 const splitted = splitArr(defaultData, 3);
 console.log(splitted);
+
 function Landing(): JSX.Element {
     const [isclick, setclick] = useState(false);
     const [productDisplay, setProductDisplay] = useState<{

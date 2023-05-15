@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import Cart from "../cartPage/cart";
+import "./checkout.css";
 // import { useNavigate } from "react-router-dom";
 
 let defaultData: {
@@ -7,6 +10,7 @@ let defaultData: {
     Price: string;
     Photo: string;
     Amount: number;
+    productTotal: number;
 }[] = [];
 const userCartKey = "MY-PAGE-USER-CART";
 const loadData = localStorage.getItem(userCartKey);
@@ -16,108 +20,62 @@ if (loadData !== null) {
 
 function Checkout(): JSX.Element {
     // const setPath = useNavigate();
-    const [cartData, setCartData] = useState<
-        {
-            Product: string;
-            Price: string;
-            Photo: string;
-            Amount: number;
-        }[]
-    >(defaultData);
+    // const [totalPrice, setTotalPrice] = useState(0);
+    const setPath = useNavigate();
+    const [cardNumber, setCardNumber] = useState<string | null>(null);
+    const [pin, setPin] = useState<string | null>(null);
 
-    function handleQuantityUp(productName: string) {
-        const withUpdatedAmount = cartData.map((cartItem) =>
-            cartItem.Product === productName
-                ? { ...cartItem, Amount: cartItem.Amount + 1 }
-                : { ...cartItem }
+    function caculateTotal() {
+        const total: number = defaultData.reduce(
+            (currentTotal: number, item) => currentTotal + item.productTotal,
+            0
         );
-        setCartData(withUpdatedAmount);
+        return total;
+        // console.log(total);
+        // setTotalPrice(total);
     }
-
-    function removeFromInventory(productName: string) {
-        const copiedData = [...cartData];
-        const dataWithRemovedItem = copiedData.filter(
-            (item): boolean => item.Product != productName
-        );
-        setCartData(dataWithRemovedItem);
+    function updateNumber(event: React.ChangeEvent<HTMLInputElement>) {
+        setCardNumber(event.target.value);
     }
-    function handleQuantityDown(productName: string) {
-        const withUpdatedAmount = cartData.map((cartItem) =>
-            cartItem.Product === productName && cartItem.Amount - 1 >= 0
-                ? { ...cartItem, Amount: cartItem.Amount - 1 }
-                : { ...cartItem }
-        );
-        setCartData(withUpdatedAmount);
+    function updatePin(event: React.ChangeEvent<HTMLInputElement>) {
+        setPin(event.target.value);
     }
-
-    function saveCartData() {
-        localStorage.setItem(userCartKey, JSON.stringify(cartData));
-        // setPath("/checkout");
-    }
+    // setTotalPrice(caculateTotal());
     return (
-        <div>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Product Image</th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {cartData.map((item) => (
-                        <tr key={item.Product}>
-                            <td width="40%">
-                                <img width="20%" src={item.Photo} />
-                            </td>
-                            <th scope="row">{item.Product}</th>
-                            <td>{item.Price}</td>
-                            <td>
-                                <Button
-                                    onClick={() =>
-                                        handleQuantityUp(item.Product)
-                                    }
-                                >
-                                    Add 1
-                                </Button>{" "}
-                                <Button
-                                    onClick={() =>
-                                        handleQuantityDown(item.Product)
-                                    }
-                                >
-                                    Remove 1
+        <div className="checkOut">
+            {caculateTotal()}
+            <Container>
+                <Row>
+                    <Col class=".col-lg-">
+                        <h2>Order Summary</h2>
+                        <Cart />
+                        <hr></hr>
+                        <h4>TOTAL AMOUNT DUE {caculateTotal()}</h4>
+                    </Col>
+                    <Col class=".col-">
+                        <h2>Payment Detals</h2>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Control
+                                className="forms"
+                                type="product"
+                                placeholder="Card Number"
+                                onChange={updateNumber}
+                            />
+                            <Form.Control
+                                className="forms"
+                                type="company"
+                                placeholder="3 digit pin"
+                                onChange={updatePin}
+                            />
+                            {cardNumber !== null && pin !== null ? (
+                                <Button onClick={() => setPath("/Fullfilled")}>
+                                    Fullfill
                                 </Button>
-                                <hr></hr>
-                                {item.Amount == 0 ? (
-                                    <Button
-                                        onClick={() =>
-                                            removeFromInventory(item.Product)
-                                        }
-                                    >
-                                        Remove
-                                    </Button>
-                                ) : null}
-                                <div> {item.Amount}</div>
-                            </td>
-                            <td key={item.Product}>
-                                {item.Amount * Number(item.Price)}
-                            </td>
-                        </tr>
-                    ))}
-                    <div className="checkoutCart">
-                        <button
-                            type="button"
-                            className="btn btn-light btn-lg"
-                            onClick={() => saveCartData()}
-                        >
-                            Save Cart
-                            {/* CHECKOUT 🛒 */}
-                        </button>
-                    </div>
-                </tbody>
-            </table>
+                            ) : null}
+                        </Form.Group>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }

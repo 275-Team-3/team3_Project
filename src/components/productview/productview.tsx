@@ -14,6 +14,7 @@ let userCart: {
     Price: string;
     Photo: string;
     Amount: number;
+    productTotal: number;
 }[] = [];
 
 const userCartKey = "MY-PAGE-USER-CART";
@@ -32,19 +33,26 @@ function Productview(props: productDetails): JSX.Element {
             Price: string;
             Photo: string;
             Amount: number;
+            productTotal: number;
         }[]
     >(userCart);
 
     function updateCart(product: string, price: string, photo: string) {
         setCartData([
             ...cartData,
-            { Product: product, Price: price, Photo: photo, Amount: 1 }
+            {
+                Product: product,
+                Price: price,
+                Photo: photo,
+                Amount: 1,
+                productTotal: Number(price)
+            }
         ]);
         console.log(JSON.stringify(cartData));
     }
     function saveData() {
         localStorage.setItem(userCartKey, JSON.stringify(cartData));
-        setPath("/checkout");
+        setPath("/Cart");
     }
     return (
         <div className="Productview">

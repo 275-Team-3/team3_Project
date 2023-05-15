@@ -181,9 +181,9 @@ function Admininventory(): JSX.Element {
                         <tr key={item.Product}>
                             <th scope="row">{item.Product}</th>
                             <td>{item.Brand}</td>
+                            <td>{item.Description}</td>
                             <td>{item.Price}</td>
                             <td>{item.Stock}</td>
-                            <td>{item.Description}</td>
                             <td>
                                 <img width="20%" src={item.Photo} />
                             </td>
