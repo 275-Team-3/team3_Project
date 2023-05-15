@@ -10,7 +10,7 @@ import Makeaccount from "./components/makeaccount/makeaccount";
 import Navbar from "./components/navbarcomponent/navbar";
 import Admin from "./components/adminlogin/admin";
 import Cart from "./components/cartPage/cart";
-import Fullfilled from "./components/orderFulfilled/orderFulfilled";
+import { Fullfilled } from "./components/orderFulfilled/orderFulfilled";
 function App(): JSX.Element {
     return (
         <div className="App">
