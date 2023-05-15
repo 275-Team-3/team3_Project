@@ -132,7 +132,7 @@ function Landing(): JSX.Element {
                                                     )
                                                 }
                                             >
-                                                VIEW PRODUCT
+                                                PRODUCT VIEW
                                             </Button>
                                         </div>
                                     </div>
