@@ -15,8 +15,7 @@ import Fullfilled from "./components/orderFulfilled/orderFulfilled";
 function App(): JSX.Element {
     return (
         <div className="App">
-            {/* <Router basename="/testrelodfix" /> */}
-            <Router basename="/testrelodfix">
+            <Router basename="/team3_Project">
                 <Navbar />
                 <Routes>
                     <Route path="/login" element={<Login />} />
