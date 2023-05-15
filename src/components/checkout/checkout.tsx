@@ -1,4 +1,3 @@
-/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -28,7 +27,8 @@ function Checkout(): JSX.Element {
 
     function caculateTotal() {
         const total: number = defaultData.reduce(
-            (currentTotal: number, item) => currentTotal + item.productTotal,
+            (currentTotal: number, item) =>
+                currentTotal + Number(item.Amount) * Number(item.Price),
             0
         );
         return total;
