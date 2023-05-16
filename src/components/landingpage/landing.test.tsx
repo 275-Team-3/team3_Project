@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
 import LandingPage from "./landing";
-import ProductView from "../productview/productview";
+//import ProductView from "../productview/productview";
 
 describe("Checkout Process", () => {
     beforeEach(() => {
