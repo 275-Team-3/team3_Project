@@ -2,63 +2,67 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
-  console.log
-    [
+PASS src/components/adminlogin/admin.test.tsx
+PASS src/components/landingpage/landing.test.tsx
+  ● Console
+
+    console.log
       [
-        {
-          Product: 'Nike mercury ',
-          Description: 'nike mercury 12 limited edition',
-          Price: '200',
-          Stock: '94',
-          Brand: 'nike',
-          Photo: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/503e9eea-02dd-4f8f-91e3-6ad74a9225cc/quest-5-mens-road-running-shoes-1tmPXN.png'
-        },
-        {
-          Product: 'Nike mercury3',
-          Description: 'nike mercury 13 limited edition',
-          Price: '200',
-          Stock: '94',
-          Brand: 'nike',
-          Photo: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=80'
-        },
-        {
-          Product: 'Nike Air ZOOM',
-          Description: 'nike Air ZOOM',
-          Price: '200',
-          Stock: '94',
-          Brand: 'nike',
-          Photo: 'https://media.istockphoto.com/id/1320786676/photo/stability-and-cushion-running-shoes-new-unbranded-running-sneaker-or-trainer-on-orange.jpg?s=170667a&w=0&k=20&c=DuOyE_MjpgEmenP0GPOVffO7-Y1J-F9hL-aJ5w4wI84='
-        }
-      ],
-      [
-        {
-          Product: 'C.RONALDO JERSEY',
-          Description: 'Nike C. RONALDO Portugal Jersey',
-          Price: '200',
-          Stock: '94',
-          Brand: 'nike',
-          Photo: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/504a9a69-9b64-411b-8673-2c917e55959f/portugal-national-team-2022-23-stadium-home-cristiano-ronaldo-mens-dri-fit-soccer-jersey-xBK2l8.png'
-        },
-        {
-          Product: 'L.Messi Jersey',
-          Description: 'L. Messi PSG Jersey',
-          Price: '200',
-          Stock: '94',
-          Brand: 'nike',
-          Photo: 'https://m.media-amazon.com/images/I/51ThXwpW4lL._AC_UY1000_.jpg'
-        }
+        [
+          {
+            Product: 'Nike mercury ',
+            Description: 'nike mercury 12 limited edition',
+            Price: '200',
+            Stock: '94',
+            Brand: 'nike',
+            Photo: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/503e9eea-02dd-4f8f-91e3-6ad74a9225cc/quest-5-mens-road-running-shoes-1tmPXN.png'
+          },
+          {
+            Product: 'Nike mercury3',
+            Description: 'nike mercury 13 limited edition',
+            Price: '200',
+            Stock: '94',
+            Brand: 'nike',
+            Photo: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=80'
+          },
+          {
+            Product: 'Nike Air ZOOM',
+            Description: 'nike Air ZOOM',
+            Price: '200',
+            Stock: '94',
+            Brand: 'nike',
+            Photo: 'https://media.istockphoto.com/id/1320786676/photo/stability-and-cushion-running-shoes-new-unbranded-running-sneaker-or-trainer-on-orange.jpg?s=170667a&w=0&k=20&c=DuOyE_MjpgEmenP0GPOVffO7-Y1J-F9hL-aJ5w4wI84='
+          }
+        ],
+        [
+          {
+            Product: 'C.RONALDO JERSEY',
+            Description: 'Nike C. RONALDO Portugal Jersey',
+            Price: '200',
+            Stock: '94',
+            Brand: 'nike',
+            Photo: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/504a9a69-9b64-411b-8673-2c917e55959f/portugal-national-team-2022-23-stadium-home-cristiano-ronaldo-mens-dri-fit-soccer-jersey-xBK2l8.png'
+          },
+          {
+            Product: 'L.Messi Jersey',
+            Description: 'L. Messi PSG Jersey',
+            Price: '200',
+            Stock: '94',
+            Brand: 'nike',
+            Photo: 'https://m.media-amazon.com/images/I/51ThXwpW4lL._AC_UY1000_.jpg'
+          }
+        ]
       ]
-    ]
 
       at Object.<anonymous> (src/components/landingpage/landing.tsx:76:9)
 
-  console.error
-    Warning: React does not recognize the `data-testId` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `data-testid` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
-        at div
-        at div
-        at Landing (/home/runner/work/team3_Project/team3_Project/src/components/landingpage/landing.tsx:79:41)
-        at Router (/home/runner/work/team3_Project/team3_Project/node_modules/react-router/lib/components.tsx:311:13)
-        at BrowserRouter (/home/runner/work/team3_Project/team3_Project/node_modules/react-router-dom/index.tsx:297:3)
+    console.error
+      Warning: React does not recognize the `data-testId` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `data-testid` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+          at div
+          at div
+          at Landing (/home/runner/work/team3_Project/team3_Project/src/components/landingpage/landing.tsx:79:41)
+          at Router (/home/runner/work/team3_Project/team3_Project/node_modules/react-router/lib/components.tsx:311:13)
+          at BrowserRouter (/home/runner/work/team3_Project/team3_Project/node_modules/react-router-dom/index.tsx:297:3)
 
       25 |     test("Renders second ProductView when button is clicked.", () => {
       26 |         const button = screen.getByTestId("buy-btnNike mercury3");
@@ -99,16 +103,10 @@
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
-PASS src/components/landingpage/landing.test.tsx
-  Checkout Process
-    ✓ Renders second card. (97 ms)
-    ✓ Renders second overlay when hovering over card. (46 ms)
-    ✓ Renders second ProductView when button is clicked. (104 ms)
-
 --------------------------------|---------|----------|---------|---------|-------------------
 File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------------------|---------|----------|---------|---------|-------------------
-All files                       |   14.63 |    10.52 |   11.59 |   14.63 |                   
+All files                       |   20.85 |    15.78 |   18.84 |   20.85 |                   
  src                            |       0 |      100 |       0 |       0 |                   
   App.tsx                       |       0 |      100 |       0 |       0 | 16                
  src/components                 |       0 |      100 |       0 |       0 |                   
@@ -116,8 +114,8 @@ All files                       |   14.63 |    10.52 |   11.59 |   14.63 |
  src/components/admininventory  |       0 |        0 |       0 |       0 |                   
   AdminInventoryTest.tsx        |       0 |      100 |       0 |       0 | 6-24              
   admininventory.tsx            |       0 |        0 |       0 |       0 | 5-204             
- src/components/adminlogin      |       0 |        0 |       0 |       0 |                   
-  admin.tsx                     |       0 |        0 |       0 |       0 | 9-50              
+ src/components/adminlogin      |    90.9 |       50 |     100 |    90.9 |                   
+  admin.tsx                     |    90.9 |       50 |     100 |    90.9 | 22                
  src/components/adminlogin.css  |       0 |      100 |       0 |       0 |                   
   admin.tsx                     |       0 |      100 |       0 |       0 | 6                 
  src/components/cartPage        |       0 |        0 |       0 |       0 |                   
@@ -139,8 +137,9 @@ All files                       |   14.63 |    10.52 |   11.59 |   14.63 |
  src/components/productview     |      50 |       50 |      20 |      50 |                   
   productview.tsx               |      50 |       50 |      20 |      50 | 25,41-55,82-90    
 --------------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 passed, 1 total
-Tests:       3 passed, 3 total
+
+Test Suites: 2 passed, 2 total
+Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        3.654 s
+Time:        3.379 s
 Ran all test suites.
