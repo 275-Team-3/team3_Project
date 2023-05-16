@@ -20,9 +20,6 @@ function Admin(): JSX.Element {
         if (admin) {
             // If user is found in json file send them to inventory page
             setPath("/admininventory");
-        } else {
-            // If user is not found, display an error message
-            alert("Invalid username or password");
         }
     };
 
