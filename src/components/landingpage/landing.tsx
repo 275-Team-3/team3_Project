@@ -104,7 +104,11 @@ function Landing(): JSX.Element {
             <h1 className="landing-title">Shop All</h1>
 
             {splitted.map((item, index) => (
-                <Carousel className="carousel-wrapper" key={index}>
+                <Carousel
+                    className="carousel-wrapper"
+                    data-testid="carousel"
+                    key={index}
+                >
                     <Carousel.Item className="carousel-items" key={index}>
                         <Stack
                             className="h-100 justify-content-center align-items-center"
@@ -113,15 +117,27 @@ function Landing(): JSX.Element {
                             key={index}
                         >
                             {item.map((element) => (
-                                <Card className="card" key={element.Product}>
+                                <Card
+                                    className="card"
+                                    key={element.Product}
+                                    data-testid={"card" + element.Product}
+                                >
                                     <div className="card-img-wrapper">
                                         <Card.Img
                                             className="card-img"
                                             src={element.Photo}
                                         />
-                                        <div className="overlay">
+                                        <div
+                                            className="overlay"
+                                            data-testid={
+                                                "overlay" + element.Product
+                                            }
+                                        >
                                             <Button
                                                 className="buy-btn"
+                                                data-testid={
+                                                    "buy-btn" + element.Product
+                                                }
                                                 variant="light"
                                                 onClick={() =>
                                                     updateStates(
@@ -152,12 +168,14 @@ function Landing(): JSX.Element {
             ))}
             {isclick == true ? (
                 // productDisplay
-                <Productview
-                    name={productDisplay.Product}
-                    price={productDisplay.Price}
-                    imge={productDisplay.Photo}
-                    description={productDisplay.Description}
-                />
+                <div data-testId={"pview" + productDisplay.Product}>
+                    <Productview
+                        name={productDisplay.Product}
+                        price={productDisplay.Price}
+                        imge={productDisplay.Photo}
+                        description={productDisplay.Description}
+                    />
+                </div>
             ) : null}
         </div>
     );
