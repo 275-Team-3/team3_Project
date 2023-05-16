@@ -23,7 +23,7 @@ describe("Admin Component", () => {
         expect(loginButton).toBeInTheDocument();
     });
 
-    test("Displays an error message for invalid login", () => {
+    test("Displays error message for unsuccessful login", () => {
         const emailInput = screen.getByPlaceholderText(
             "Email or Username"
         ) as HTMLInputElement;
@@ -37,7 +37,7 @@ describe("Admin Component", () => {
         fireEvent.click(loginButton);
     });
 
-    test("Redirects to admin inventory page for valid login", () => {
+    test("Direct admin to admin inventory page", () => {
         const emailInput = screen.getByPlaceholderText(
             "Email or Username"
         ) as HTMLInputElement;
