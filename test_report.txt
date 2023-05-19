@@ -2,6 +2,295 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test --coverage
 
+FAIL src/components/makeaccount/makeaccount.test.tsx
+  ● Admin Component › Renders the login form
+
+    TestingLibraryElementError: Unable to find an element with the text: LOGIN NOW. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"profile"[39m
+          [36m>[39m
+            [36m<img[39m
+              [33msrc[39m=[32m"https://avatars.dicebear.com/api/human/80.svg"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"forms"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Please Enter Email"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Name"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Qualities"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Password"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Age"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"button btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mUPDATE onClick[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      18 |             "Password"
+      19 |         ) as HTMLInputElement;
+    > 20 |         const loginButton = screen.getByText("LOGIN NOW");
+         |                                    ^
+      21 |
+      22 |         expect(passwordInput).toBeInTheDocument();
+      23 |         expect(loginButton).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/components/makeaccount/makeaccount.test.tsx:20:36)
+
+  ● Admin Component › Displays error message for unsuccessful login
+
+    TestingLibraryElementError: Unable to find an element with the placeholder text of: Email or Username
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"profile"[39m
+          [36m>[39m
+            [36m<img[39m
+              [33msrc[39m=[32m"https://avatars.dicebear.com/api/human/82.svg"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"forms"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Please Enter Email"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Name"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Qualities"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Password"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Age"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"button btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mUPDATE onClick[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      25 |
+      26 |     test("Displays error message for unsuccessful login", () => {
+    > 27 |         const emailInput = screen.getByPlaceholderText(
+         |                                   ^
+      28 |             "Email or Username"
+      29 |         ) as HTMLInputElement;
+      30 |         const passwordInput = screen.getByPlaceholderText(
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByPlaceholderText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/components/makeaccount/makeaccount.test.tsx:27:35)
+
+  ● Admin Component › Direct admin to admin inventory page
+
+    TestingLibraryElementError: Unable to find an element with the placeholder text of: Email or Username
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"profile"[39m
+          [36m>[39m
+            [36m<img[39m
+              [33msrc[39m=[32m"https://avatars.dicebear.com/api/human/68.svg"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"forms"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Please Enter Email"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Name"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Qualities"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Password"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Age"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"button btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mUPDATE onClick[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      39 |
+      40 |     test("Direct admin to admin inventory page", () => {
+    > 41 |         const emailInput = screen.getByPlaceholderText(
+         |                                   ^
+      42 |             "Email or Username"
+      43 |         ) as HTMLInputElement;
+      44 |         const passwordInput = screen.getByPlaceholderText(
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByPlaceholderText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/components/makeaccount/makeaccount.test.tsx:41:35)
+
+  ● Admin Component › Updates username and password input fields
+
+    TestingLibraryElementError: Unable to find an element with the placeholder text of: Email or Username
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"profile"[39m
+          [36m>[39m
+            [36m<img[39m
+              [33msrc[39m=[32m"https://avatars.dicebear.com/api/human/59.svg"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"forms"[39m
+          [36m>[39m
+            [36m<div>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Please Enter Email"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Name"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Qualities"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Password"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"forms form-control"[39m
+                [33mplaceholder[39m=[32m"Age"[39m
+                [33mtype[39m=[32m"email"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"button btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mUPDATE onClick[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      53 |
+      54 |     test("Updates username and password input fields", () => {
+    > 55 |         const emailInput = screen.getByPlaceholderText(
+         |                                   ^
+      56 |             "Email or Username"
+      57 |         ) as HTMLInputElement;
+      58 |         const passwordInput = screen.getByPlaceholderText(
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByPlaceholderText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/components/makeaccount/makeaccount.test.tsx:55:35)
+
 PASS src/components/adminlogin/admin.test.tsx
 PASS src/components/landingpage/landing.test.tsx
   ● Console
@@ -106,11 +395,11 @@ PASS src/components/landingpage/landing.test.tsx
 --------------------------------|---------|----------|---------|---------|-------------------
 File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------------------|---------|----------|---------|---------|-------------------
-All files                       |   20.85 |    15.78 |   18.84 |   20.85 |                   
+All files                       |   23.92 |    15.78 |   23.18 |   23.92 |                   
  src                            |       0 |      100 |       0 |       0 |                   
   App.tsx                       |       0 |      100 |       0 |       0 | 16                
- src/components                 |       0 |      100 |       0 |       0 |                   
-  userIcon.tsx                  |       0 |      100 |       0 |       0 | 4-8               
+ src/components                 |     100 |      100 |     100 |     100 |                   
+  userIcon.tsx                  |     100 |      100 |     100 |     100 |                   
  src/components/admininventory  |       0 |        0 |       0 |       0 |                   
   AdminInventoryTest.tsx        |       0 |      100 |       0 |       0 | 6-24              
   admininventory.tsx            |       0 |        0 |       0 |       0 | 5-204             
@@ -126,9 +415,9 @@ All files                       |   20.85 |    15.78 |   18.84 |   20.85 |
   landing.tsx                   |   94.44 |       75 |     100 |   94.44 | 57                
  src/components/loginpage       |       0 |        0 |       0 |       0 |                   
   loginpage.tsx                 |       0 |        0 |       0 |       0 | 14-80             
- src/components/makeaccount     |       0 |      100 |       0 |       0 |                   
+ src/components/makeaccount     |     100 |      100 |     100 |     100 |                   
   accounts.tsx                  |       0 |        0 |       0 |       0 |                   
-  makeaccount.tsx               |       0 |      100 |       0 |       0 | 8                 
+  makeaccount.tsx               |     100 |      100 |     100 |     100 |                   
  src/components/navbarcomponent |       0 |      100 |       0 |       0 |                   
   navbar.tsx                    |       0 |      100 |       0 |       0 | 5-6               
   navbarstyle.tsx               |       0 |      100 |     100 |       0 | 5-41              
@@ -138,8 +427,8 @@ All files                       |   20.85 |    15.78 |   18.84 |   20.85 |
   productview.tsx               |      50 |       50 |      20 |      50 | 25,41-55,82-90    
 --------------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 2 passed, 2 total
-Tests:       7 passed, 7 total
+Test Suites: 1 failed, 2 passed, 3 total
+Tests:       4 failed, 7 passed, 11 total
 Snapshots:   0 total
-Time:        3.379 s
+Time:        4.018 s
 Ran all test suites.
