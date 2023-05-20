@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
-import Admin from "../makeaccount/makeaccount";
+import Admin from "../adminlogin/admin";
 
 describe("Admin Component", () => {
     beforeEach(() => {
