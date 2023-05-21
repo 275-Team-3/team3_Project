@@ -69,58 +69,60 @@ function Cart(): JSX.Element {
         // setPath("/checkout");
     }
     return (
-        <div>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Product Image</th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {cartData.map((item) => (
-                        <tr key={item.Photo}>
-                            <td width="40%">
-                                <img width="20%" src={item.Photo} />
-                            </td>
-                            <th scope="row">{item.Product}</th>
-                            <td>{item.Price}</td>
-                            <td>
+        <table className="table">
+            <thead>
+                <tr>
+                    <th scope="col">Product Image</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {cartData.map((item) => (
+                    <tr key={item.Photo} data-testid={"row" + item.Product}>
+                        <td width="40%" data-testid={"img" + item.Product}>
+                            <img width="20%" src={item.Photo} />
+                        </td>
+                        <th scope="row">{item.Product}</th>
+                        <td data-testid={"price" + item.Product}>
+                            {" "}
+                            {item.Price}{" "}
+                        </td>
+                        <td>
+                            <Button
+                                onClick={() => handleQuantityUp(item.Product)}
+                            >
+                                Add 1
+                            </Button>{" "}
+                            <Button
+                                onClick={() => handleQuantityDown(item.Product)}
+                            >
+                                Remove 1
+                            </Button>
+                            <hr></hr>
+                            {item.Amount == 0 ? (
                                 <Button
                                     onClick={() =>
-                                        handleQuantityUp(item.Product)
+                                        removeFromInventory(item.Product)
                                     }
                                 >
-                                    Add 1
-                                </Button>{" "}
-                                <Button
-                                    onClick={() =>
-                                        handleQuantityDown(item.Product)
-                                    }
-                                >
-                                    Remove 1
+                                    Remove
                                 </Button>
-                                <hr></hr>
-                                {item.Amount == 0 ? (
-                                    <Button
-                                        onClick={() =>
-                                            removeFromInventory(item.Product)
-                                        }
-                                    >
-                                        Remove
-                                    </Button>
-                                ) : null}
-                                <div> {item.Amount}</div>
-                            </td>
-                            <td key={item.Product}>
-                                {item.Amount * Number(item.Price)}
-                            </td>
-                        </tr>
-                    ))}
-                    <div className="checkoutCart">
+                            ) : null}
+                            {item.Amount}
+                        </td>
+                        <td
+                            key={item.Product}
+                            data-testid={"total" + item.Product}
+                        >
+                            {item.Amount * Number(item.Price)}
+                        </td>
+                    </tr>
+                ))}
+                <tr key="test">
+                    <td className="checkoutCart">
                         <button
                             type="button"
                             className="btn btn-light btn-lg"
@@ -129,10 +131,10 @@ function Cart(): JSX.Element {
                             Save Cart
                             {/* CHECKOUT 🛒 */}
                         </button>
-                    </div>
-                </tbody>
-            </table>
-        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     );
 }
 

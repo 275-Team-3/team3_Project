@@ -5,17 +5,43 @@ import UserIcon from "../userIcon";
 const Navbar = () => {
     return (
         <>
-            <Nav>
+            <Nav data-testid="Navbar">
                 <UserIcon />
-                <NavMenu>
-                    <NavLink to="/Login">Login</NavLink>
-                    <NavLink to="/Landing">Landing</NavLink>
+                <NavMenu data-testid="NavMenu">
+                    <NavLink role="nav" to="/Login" data-testid="LoginNav">
+                        Login
+                    </NavLink>
+                    <NavLink role="nav" to="/Landing" data-testid="LandingNav">
+                        Landing
+                    </NavLink>
                     {/* <NavLink to="/Productview">Product View</NavLink> */}
-                    <NavLink to="/Makeaccount">Account</NavLink>
-                    <NavLink to="/Cart">Cart</NavLink>
-                    <NavLink to="/Checkout">Checkout</NavLink>
-                    <NavLink to="/Admin">Admin</NavLink>
-                    <NavLink to="/Admininventory">Admin inventory</NavLink>
+                    <NavLink
+                        role="nav"
+                        to="/Makeaccount"
+                        data-testid="AccountNav"
+                    >
+                        Account
+                    </NavLink>
+                    <NavLink role="nav" to="/Cart" data-testid="CartNav">
+                        Cart
+                    </NavLink>
+                    <NavLink
+                        role="nav"
+                        to="/Checkout"
+                        data-testid="CheckoutNav"
+                    >
+                        Checkout
+                    </NavLink>
+                    <NavLink role="nav" to="/Admin" data-testid="AdminNav">
+                        Admin
+                    </NavLink>
+                    <NavLink
+                        role="nav"
+                        to="/Admininventory"
+                        data-testid="AdminInvNav"
+                    >
+                        Admin inventory
+                    </NavLink>
                 </NavMenu>
             </Nav>
         </>

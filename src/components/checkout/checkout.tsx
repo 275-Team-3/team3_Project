@@ -48,13 +48,13 @@ function Checkout(): JSX.Element {
             {caculateTotal()}
             <Container>
                 <Row>
-                    <Col class=".col-lg-">
+                    <Col data-testid="Cart" className=".col-lg-">
                         <h2>Order Summary</h2>
                         <Cart />
                         <hr></hr>
                         <h4>TOTAL AMOUNT DUE {caculateTotal()}</h4>
                     </Col>
-                    <Col class=".col-">
+                    <Col className=".col-">
                         <h2>Payment Detals</h2>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Control
