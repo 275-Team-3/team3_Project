@@ -1,7 +1,7 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 // import { createMemoryHistory } from "history";
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Navbar from "./navbar";
 import userEvent from "@testing-library/user-event";
 describe("NavBar component", () => {

@@ -1,9 +1,7 @@
 import React from "react";
 
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 // import { createMemoryHistory } from "history";
-import { BrowserRouter, Link } from "react-router-dom";
-import userEvent from "@testing-library/user-event";
 import UserIcon from "./userIcon";
 describe("userIcon", () => {
     let mathRandomFunction: jest.SpyInstance;
