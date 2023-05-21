@@ -100,15 +100,16 @@ PASS src/components/landingpage/landing.test.tsx
       at Function.click (node_modules/@testing-library/react/dist/fire-event.js:18:52)
       at Object.<anonymous> (src/components/landingpage/landing.test.tsx:27:19)
 
+PASS src/components/makeaccount/makeaccount.test.tsx
 PASS src/components/admininventory/Admininventory.test.tsx
 --------------------------------|---------|----------|---------|---------|-------------------
 File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------------------|---------|----------|---------|---------|-------------------
-All files                       |   33.77 |    23.68 |   28.12 |   33.77 |                   
+All files                       |   37.08 |    23.68 |   32.81 |   37.08 |                   
  src                            |       0 |      100 |       0 |       0 |                   
   App.tsx                       |       0 |      100 |       0 |       0 | 16                
- src/components                 |       0 |      100 |       0 |       0 |                   
-  userIcon.tsx                  |       0 |      100 |       0 |       0 | 4-8               
+ src/components                 |     100 |      100 |     100 |     100 |                   
+  userIcon.tsx                  |     100 |      100 |     100 |     100 |                   
  src/components/admininventory  |   54.83 |       75 |   33.33 |   54.83 |                   
   admininventory.tsx            |   54.83 |       75 |   33.33 |   54.83 | 54,79-117,193     
  src/components/adminlogin      |    90.9 |       50 |     100 |    90.9 |                   
@@ -123,9 +124,9 @@ All files                       |   33.77 |    23.68 |   28.12 |   33.77 |
   landing.tsx                   |   94.44 |       75 |     100 |   94.44 | 57                
  src/components/loginpage       |       0 |        0 |       0 |       0 |                   
   loginpage.tsx                 |       0 |        0 |       0 |       0 | 14-80             
- src/components/makeaccount     |       0 |      100 |       0 |       0 |                   
+ src/components/makeaccount     |     100 |      100 |     100 |     100 |                   
   accounts.tsx                  |       0 |        0 |       0 |       0 |                   
-  makeaccount.tsx               |       0 |      100 |       0 |       0 | 8                 
+  makeaccount.tsx               |     100 |      100 |     100 |     100 |                   
  src/components/navbarcomponent |       0 |      100 |       0 |       0 |                   
   navbar.tsx                    |       0 |      100 |       0 |       0 | 5-6               
   navbarstyle.tsx               |       0 |      100 |     100 |       0 | 5-41              
@@ -135,8 +136,8 @@ All files                       |   33.77 |    23.68 |   28.12 |   33.77 |
   productview.tsx               |      50 |       50 |      20 |      50 | 25,41-55,82-90    
 --------------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 4 passed, 4 total
-Tests:       14 passed, 14 total
+Test Suites: 5 passed, 5 total
+Tests:       17 passed, 17 total
 Snapshots:   0 total
-Time:        5.775 s
+Time:        4.777 s
 Ran all test suites.
