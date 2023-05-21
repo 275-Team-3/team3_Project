@@ -56,20 +56,37 @@ function Productview(props: productDetails): JSX.Element {
     }
     return (
         <div className="Productview">
-            <div className="leftColumn">
-                <img src={props.imge} className="imageDimension" />
+            <div className="leftColumn" data-testid="leftColumn">
+                <img
+                    src={props.imge}
+                    className="imageDimension"
+                    data-testid={"view " + props.imge}
+                />
             </div>
-            <div className="rightColumn">
+            <div className="rightColumn" data-testid="rightColumn">
                 <div className="productNameArea">
-                    <h1 className="productName">{props.name}</h1>
+                    <h1
+                        className="productName"
+                        data-testid={"view " + props.name}
+                    >
+                        {props.name}
+                    </h1>
 
                     <div className="productPriceArea">
-                        <h5 className="productPrice">{props.price}</h5>
+                        <h5
+                            className="productPrice"
+                            data-testid={"view " + props.price}
+                        >
+                            {props.price}
+                        </h5>
                     </div>
                     <div className="sizeWord">
                         <h3>Description: </h3>
                     </div>
-                    <div className="sizeOptions">
+                    <div
+                        className="sizeOptions"
+                        data-testid={"view " + props.description}
+                    >
                         <p>{props.description}</p>
                     </div>
                 </div>

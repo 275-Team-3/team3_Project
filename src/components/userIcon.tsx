@@ -5,7 +5,12 @@ function UserIcon(): JSX.Element {
     useEffect(() => {
         return setIcon(Math.floor(Math.random() * 100));
     }, []);
-    return <img src={`https://avatars.dicebear.com/api/human/${icon}.svg`} />;
+    return (
+        <img
+            src={`https://avatars.dicebear.com/api/human/${icon}.svg`}
+            data-testid={"userImage"}
+        />
+    );
 }
 
 export default UserIcon;
