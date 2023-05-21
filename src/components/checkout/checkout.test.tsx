@@ -1,15 +1,8 @@
 import React from "react";
-import {
-    fireEvent,
-    getByTestId,
-    getByText,
-    render,
-    screen
-} from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 import Checkout from "./checkout";
-import userEvent from "@testing-library/user-event";
 
 describe("Checkout Process", () => {
     beforeEach(() => {

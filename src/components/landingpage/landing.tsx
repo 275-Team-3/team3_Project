@@ -73,7 +73,7 @@ const splitArr = (
     );
 
 const splitted = splitArr(defaultData, 3);
-console.log(splitted);
+// console.log(splitted);
 
 function Landing(): JSX.Element {
     const [isclick, setclick] = useState(false);
@@ -168,7 +168,7 @@ function Landing(): JSX.Element {
             ))}
             {isclick == true ? (
                 // productDisplay
-                <div data-testId={"pview" + productDisplay.Product}>
+                <div data-testid={"pview" + productDisplay.Product}>
                     <Productview
                         name={productDisplay.Product}
                         price={productDisplay.Price}

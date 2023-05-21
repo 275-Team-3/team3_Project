@@ -48,7 +48,7 @@ function Productview(props: productDetails): JSX.Element {
                 productTotal: Number(price)
             }
         ]);
-        console.log(JSON.stringify(cartData));
+        // console.log(JSON.stringify(cartData));
     }
     function saveData() {
         localStorage.setItem(userCartKey, JSON.stringify(cartData));

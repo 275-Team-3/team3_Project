@@ -20,26 +20,31 @@ describe("Product view component", () => {
             </BrowserRouter>
         );
     });
-    test("prod name", () => {
-        const cards = screen.getByTestId("view Nike mercury 200");
-        expect(cards).toBeInTheDocument();
-    });
-    test("prod price", () => {
-        const cards = screen.getByTestId("view 200");
-        expect(cards).toBeInTheDocument();
-    });
-    test("prod img", () => {
-        const cards = screen.getByTestId(
-            "view https://static.nike.com/a/images/t_default/e839f55c-84d5-4030-9bcf-644e6a6463ea/revolution-6-mens-running-shoes-extra-wide-qP3nkM.png"
-        );
-        expect(cards).toBeInTheDocument();
-    });
-    test("prod desc", () => {
-        const cards = screen.getByTestId("view new Nike shoes");
-        expect(cards).toBeInTheDocument();
+
+    test("User has a 2 column layout", () => {
+        const leftColumn = screen.getByTestId("leftColumn");
+        expect(leftColumn).toBeInTheDocument();
+        const rightColumn = screen.getByTestId("rightColumn");
+        expect(rightColumn).toBeInTheDocument();
     });
 
-    test("button options", () => {
+    test("productView page displays correctly with passed in props", () => {
+        const productName = screen.getByTestId("view Nike mercury 200");
+        expect(productName).toBeInTheDocument();
+
+        const productPrice = screen.getByTestId("view 200");
+        expect(productPrice).toBeInTheDocument();
+
+        const productImg = screen.getByTestId(
+            "view https://static.nike.com/a/images/t_default/e839f55c-84d5-4030-9bcf-644e6a6463ea/revolution-6-mens-running-shoes-extra-wide-qP3nkM.png"
+        );
+        expect(productImg).toBeInTheDocument();
+
+        const productDescription = screen.getByTestId("view new Nike shoes");
+        expect(productDescription).toBeInTheDocument();
+    });
+
+    test("User can add to their cart and save to their cart", () => {
         const checkoutButton1 = screen.getByRole("button", {
             name: /ADD TO CART 🛒/i
         });
@@ -48,12 +53,5 @@ describe("Product view component", () => {
             name: /Save TO CART 🛒/i
         });
         fireEvent.click(checkoutButton2);
-    });
-
-    test("2 sections", () => {
-        const cards = screen.getByTestId("leftColumn");
-        expect(cards).toBeInTheDocument();
-        const cards1 = screen.getByTestId("rightColumn");
-        expect(cards1).toBeInTheDocument();
     });
 });
