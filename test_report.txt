@@ -4,108 +4,19 @@
 
 PASS src/components/loginpage/login.test.tsx
 PASS src/components/adminlogin/admin.test.tsx
+PASS src/components/productview/productview.test.tsx
+PASS src/components/checkout/checkout.test.tsx
+PASS src/components/cartPage/cart.test.tsx
+PASS src/components/userIcon.test.tsx
+PASS src/components/navbarcomponent/navbar.test.tsx
 PASS src/components/landingpage/landing.test.tsx
-  ● Console
-
-    console.log
-      [
-        [
-          {
-            Product: 'Nike mercury ',
-            Description: 'nike mercury 12 limited edition',
-            Price: '200',
-            Stock: '94',
-            Brand: 'nike',
-            Photo: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/503e9eea-02dd-4f8f-91e3-6ad74a9225cc/quest-5-mens-road-running-shoes-1tmPXN.png'
-          },
-          {
-            Product: 'Nike mercury3',
-            Description: 'nike mercury 13 limited edition',
-            Price: '200',
-            Stock: '94',
-            Brand: 'nike',
-            Photo: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=80'
-          },
-          {
-            Product: 'Nike Air ZOOM',
-            Description: 'nike Air ZOOM',
-            Price: '200',
-            Stock: '94',
-            Brand: 'nike',
-            Photo: 'https://media.istockphoto.com/id/1320786676/photo/stability-and-cushion-running-shoes-new-unbranded-running-sneaker-or-trainer-on-orange.jpg?s=170667a&w=0&k=20&c=DuOyE_MjpgEmenP0GPOVffO7-Y1J-F9hL-aJ5w4wI84='
-          }
-        ],
-        [
-          {
-            Product: 'C.RONALDO JERSEY',
-            Description: 'Nike C. RONALDO Portugal Jersey',
-            Price: '200',
-            Stock: '94',
-            Brand: 'nike',
-            Photo: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/504a9a69-9b64-411b-8673-2c917e55959f/portugal-national-team-2022-23-stadium-home-cristiano-ronaldo-mens-dri-fit-soccer-jersey-xBK2l8.png'
-          },
-          {
-            Product: 'L.Messi Jersey',
-            Description: 'L. Messi PSG Jersey',
-            Price: '200',
-            Stock: '94',
-            Brand: 'nike',
-            Photo: 'https://m.media-amazon.com/images/I/51ThXwpW4lL._AC_UY1000_.jpg'
-          }
-        ]
-      ]
-
-      at Object.<anonymous> (src/components/landingpage/landing.tsx:76:9)
-
-    console.error
-      Warning: React does not recognize the `data-testId` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `data-testid` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
-          at div
-          at div
-          at Landing (/home/runner/work/team3_Project/team3_Project/src/components/landingpage/landing.tsx:79:41)
-          at Router (/home/runner/work/team3_Project/team3_Project/node_modules/react-router/lib/components.tsx:311:13)
-          at BrowserRouter (/home/runner/work/team3_Project/team3_Project/node_modules/react-router-dom/index.tsx:297:3)
-
-      25 |     test("Renders second ProductView when button is clicked.", () => {
-      26 |         const button = screen.getByTestId("buy-btnNike mercury3");
-    > 27 |         fireEvent.click(button);
-         |                   ^
-      28 |         const pview = screen.getByTestId("pviewNike mercury3");
-      29 |         expect(pview).toBeInTheDocument();
-      30 |     });
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateProperty$1 (node_modules/react-dom/cjs/react-dom.development.js:3513:7)
-      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom.development.js:3559:21)
-      at validateProperties$2 (node_modules/react-dom/cjs/react-dom.development.js:3583:3)
-      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom.development.js:8765:5)
-      at setInitialProperties (node_modules/react-dom/cjs/react-dom.development.js:9041:5)
-      at finalizeInitialChildren (node_modules/react-dom/cjs/react-dom.development.js:10201:3)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19470:17)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
-      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:22670:7)
-      at performSyncWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:22293:18)
-      at node_modules/react-dom/cjs/react-dom.development.js:11327:26
-      at unstable_runWithPriority (node_modules/scheduler/cjs/scheduler.development.js:468:12)
-      at runWithPriority$1 (node_modules/react-dom/cjs/react-dom.development.js:11276:10)
-      at flushSyncCallbackQueueImpl (node_modules/react-dom/cjs/react-dom.development.js:11322:9)
-      at flushSyncCallbackQueue (node_modules/react-dom/cjs/react-dom.development.js:11309:3)
-      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:22387:7)
-      at act (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1042:14)
-      at Object.eventWrapper (node_modules/@testing-library/react/dist/pure.js:65:28)
-      at fireEvent (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/events.js:12:35)
-      at Function.fireEvent.<computed> [as click] (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/events.js:110:36)
-      at Function.click (node_modules/@testing-library/react/dist/fire-event.js:18:52)
-      at Object.<anonymous> (src/components/landingpage/landing.test.tsx:27:19)
-
+PASS src/components/orderFulfilled/orderFulfilled.test.tsx
 PASS src/components/makeaccount/makeaccount.test.tsx
-PASS src/components/admininventory/Admininventory.test.tsx
+PASS src/components/admininventory/AdminInventory.test.tsx
 --------------------------------|---------|----------|---------|---------|-------------------
 File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------------------|---------|----------|---------|---------|-------------------
-All files                       |   37.08 |    23.68 |   32.81 |   37.08 |                   
+All files                       |   59.06 |    39.47 |   54.68 |   59.06 |                   
  src                            |       0 |      100 |       0 |       0 |                   
   App.tsx                       |       0 |      100 |       0 |       0 | 16                
  src/components                 |     100 |      100 |     100 |     100 |                   
@@ -116,28 +27,28 @@ All files                       |   37.08 |    23.68 |   32.81 |   37.08 |
   admin.tsx                     |    90.9 |       50 |     100 |    90.9 | 22                
  src/components/adminlogin.css  |       0 |      100 |       0 |       0 |                   
   admin.tsx                     |       0 |      100 |       0 |       0 | 6                 
- src/components/cartPage        |       0 |        0 |       0 |       0 |                   
-  cart.tsx                      |       0 |        0 |       0 |       0 | 13-127            
- src/components/checkout        |       0 |        0 |       0 |       0 |                   
-  checkout.tsx                  |       0 |        0 |       0 |       0 | 15-73             
- src/components/landingpage     |   94.44 |       75 |     100 |   94.44 |                   
-  landing.tsx                   |   94.44 |       75 |     100 |   94.44 | 57                
+ src/components/cartPage        |   34.78 |       10 |   23.07 |   34.78 |                   
+  cart.tsx                      |   34.78 |       10 |   23.07 |   34.78 | 17,33-64,84-108   
+ src/components/checkout        |   86.66 |    83.33 |   83.33 |   86.66 |                   
+  checkout.tsx                  |   86.66 |    83.33 |   83.33 |   86.66 | 19,32             
+ src/components/landingpage     |   94.11 |       75 |     100 |   94.11 |                   
+  landing.tsx                   |   94.11 |       75 |     100 |   94.11 | 57                
  src/components/loginpage       |       0 |        0 |       0 |       0 |                   
   loginpage.tsx                 |       0 |        0 |       0 |       0 | 14-80             
  src/components/makeaccount     |     100 |      100 |     100 |     100 |                   
   accounts.tsx                  |       0 |        0 |       0 |       0 |                   
   makeaccount.tsx               |     100 |      100 |     100 |     100 |                   
- src/components/navbarcomponent |       0 |      100 |       0 |       0 |                   
-  navbar.tsx                    |       0 |      100 |       0 |       0 | 5-6               
-  navbarstyle.tsx               |       0 |      100 |     100 |       0 | 5-41              
- src/components/orderFulfilled  |       0 |      100 |       0 |       0 |                   
-  orderFulfilled.tsx            |       0 |      100 |       0 |       0 | 5                 
- src/components/productview     |      50 |       50 |      20 |      50 |                   
-  productview.tsx               |      50 |       50 |      20 |      50 | 25,41-55,82-90    
+ src/components/navbarcomponent |     100 |      100 |     100 |     100 |                   
+  navbar.tsx                    |     100 |      100 |     100 |     100 |                   
+  navbarstyle.tsx               |     100 |      100 |     100 |     100 |                   
+ src/components/orderFulfilled  |     100 |      100 |     100 |     100 |                   
+  orderFulfilled.tsx            |     100 |      100 |     100 |     100 |                   
+ src/components/productview     |    92.3 |       50 |     100 |    92.3 |                   
+  productview.tsx               |    92.3 |       50 |     100 |    92.3 | 25                
 --------------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 5 passed, 5 total
-Tests:       17 passed, 17 total
+Test Suites: 11 passed, 11 total
+Tests:       35 passed, 35 total
 Snapshots:   0 total
-Time:        4.777 s
+Time:        7.422 s
 Ran all test suites.
