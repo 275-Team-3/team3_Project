@@ -15,9 +15,9 @@ describe("Checkout Process", () => {
         const AddtoInventory = screen.getByText("Add to Inventory");
         fireEvent.click(AddtoInventory);
     });
-    test("Admin can remove products", () => {
-        const remove = screen.getByText("Remove");
-        fireEvent.click(remove);
+    test("Admin can see products", () => {
+        const prod = screen.getByText("Product");
+        fireEvent.click(prod);
     });
     test("Admin can save inventory", () => {
         const inventory = screen.getByText("Save new inventory");
